@@ -64,7 +64,7 @@ const services = [
     title: "Rent Collection",
     description:
       "Guaranteed rent collection with direct deposit to your account. We chase late payments so you don't have to.",
-    gradient: "from-emerald-500 to-teal-500",
+    gradient: "from-rose-400 to-pink-500",
   },
   {
     icon: (
@@ -133,7 +133,7 @@ const services = [
     title: "Compliance & Safety",
     description:
       "We ensure your property meets all HMO regulations, safety certificates, and licensing requirements. Stay compliant, stay protected.",
-    gradient: "from-teal-500 to-cyan-500",
+    gradient: "from-slate-600 to-slate-800",
   },
 ];
 
@@ -168,14 +168,14 @@ export default function Services() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-6 transition-all duration-700 ${
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 border border-rose-100 mb-6 transition-all duration-700 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="w-2 h-2 bg-emerald-500 rounded-full" />
-            <span className="text-sm font-medium text-emerald-700">
+            <span className="w-2 h-2 bg-rose-400 rounded-full" />
+            <span className="text-sm font-medium text-rose-700">
               Our Services
             </span>
           </div>
@@ -189,7 +189,7 @@ export default function Services() {
           >
             Everything You Need,
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500">
               Nothing You Don&apos;t
             </span>
           </h2>

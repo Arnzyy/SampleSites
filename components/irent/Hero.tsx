@@ -15,9 +15,9 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
         {/* Gradient Orbs */}
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-rose-400/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-slate-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-rose-400/5 rounded-full blur-3xl" />
 
         {/* Grid Pattern */}
         <div
@@ -40,7 +40,7 @@ export default function Hero() {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            <span className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
             <span className="text-sm text-white/70">
               Trusted HMO Property Management in London
             </span>
@@ -56,7 +56,7 @@ export default function Hero() {
           >
             Tired of{" "}
             <span className="relative">
-              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">
                 Managing
               </span>
               <svg
@@ -72,8 +72,8 @@ export default function Hero() {
                 />
                 <defs>
                   <linearGradient id="gradient" x1="0" y1="0" x2="200" y2="0">
-                    <stop stopColor="#34d399" />
-                    <stop offset="1" stopColor="#2dd4bf" />
+                    <stop stopColor="#fb7185" />
+                    <stop offset="1" stopColor="#f472b6" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -93,7 +93,7 @@ export default function Hero() {
             Stop dealing with unreliable agents and endless headaches. We handle{" "}
             <span className="text-white">everything</span> — from tenant vetting
             to maintenance — so you can enjoy{" "}
-            <span className="text-emerald-400">hassle-free rental income</span>.
+            <span className="text-rose-400">hassle-free rental income</span>.
           </p>
 
           {/* CTAs */}
@@ -106,7 +106,7 @@ export default function Hero() {
           >
             <Link
               href="#contact"
-              className="group px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
+              className="group px-8 py-4 bg-gradient-to-r from-rose-400 to-pink-500 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-rose-500/25 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
             >
               Get Free Consultation
               <svg

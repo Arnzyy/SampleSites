@@ -85,7 +85,7 @@ export default function Header() {
               </a>
               <Link
                 href="#contact"
-                className="px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-sm font-medium rounded-xl hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:-translate-y-0.5"
+                className="px-5 py-2.5 bg-gradient-to-r from-rose-400 to-pink-500 text-white text-sm font-medium rounded-xl hover:shadow-lg hover:shadow-rose-500/25 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Get Started
               </Link>
@@ -170,7 +170,7 @@ export default function Header() {
               <Link
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block mt-2 px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-center font-medium rounded-xl"
+                className="block mt-2 px-4 py-3 bg-gradient-to-r from-rose-400 to-pink-500 text-white text-center font-medium rounded-xl"
               >
                 Get Started
               </Link>

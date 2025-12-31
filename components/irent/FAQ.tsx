@@ -63,14 +63,14 @@ export default function FAQ() {
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-6 transition-all duration-700 ${
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 border border-rose-100 mb-6 transition-all duration-700 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="w-2 h-2 bg-emerald-500 rounded-full" />
-            <span className="text-sm font-medium text-emerald-700">FAQ</span>
+            <span className="w-2 h-2 bg-rose-400 rounded-full" />
+            <span className="text-sm font-medium text-rose-700">FAQ</span>
           </div>
 
           <h2
@@ -82,7 +82,7 @@ export default function FAQ() {
           >
             Questions?
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500">
               We&apos;ve Got Answers
             </span>
           </h2>
@@ -106,7 +106,7 @@ export default function FAQ() {
                 }
                 className={`w-full flex items-center justify-between p-6 rounded-2xl text-left transition-all duration-300 ${
                   openIndex === index
-                    ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25"
+                    ? "bg-gradient-to-r from-rose-400 to-pink-500 text-white shadow-lg shadow-rose-500/25"
                     : "bg-neutral-50 text-neutral-900 hover:bg-neutral-100"
                 }`}
               >

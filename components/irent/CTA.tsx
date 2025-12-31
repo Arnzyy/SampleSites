@@ -31,7 +31,7 @@ export default function CTA() {
       className="relative py-24 lg:py-32 overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
         {/* Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -44,7 +44,7 @@ export default function CTA() {
         </div>
         {/* Gradient Orbs */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-rose-400/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
@@ -74,7 +74,7 @@ export default function CTA() {
         >
           <Link
             href="mailto:info@daxamanagement.com"
-            className="group px-8 py-4 bg-white text-emerald-600 font-semibold rounded-2xl hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
+            className="group px-8 py-4 bg-gradient-to-r from-rose-400 to-pink-500 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-rose-500/25 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
           >
             <svg
               className="w-5 h-5"

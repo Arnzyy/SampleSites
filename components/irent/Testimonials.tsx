@@ -53,14 +53,14 @@ export default function Testimonials() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-6 transition-all duration-700 ${
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 border border-rose-100 mb-6 transition-all duration-700 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="w-2 h-2 bg-emerald-500 rounded-full" />
-            <span className="text-sm font-medium text-emerald-700">
+            <span className="w-2 h-2 bg-rose-400 rounded-full" />
+            <span className="text-sm font-medium text-rose-700">
               Testimonials
             </span>
           </div>
@@ -74,7 +74,7 @@ export default function Testimonials() {
           >
             Loved by Landlords
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500">
               Across London
             </span>
           </h2>
@@ -94,7 +94,7 @@ export default function Testimonials() {
             >
               {/* Quote Icon */}
               <div className="absolute -top-4 left-8">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center">
                   <svg
                     className="w-5 h-5 text-white"
                     fill="currentColor"

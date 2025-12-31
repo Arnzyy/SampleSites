@@ -120,14 +120,14 @@ export default function HowItWorks() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-6 transition-all duration-700 ${
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 border border-rose-100 mb-6 transition-all duration-700 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="w-2 h-2 bg-emerald-500 rounded-full" />
-            <span className="text-sm font-medium text-emerald-700">
+            <span className="w-2 h-2 bg-rose-400 rounded-full" />
+            <span className="text-sm font-medium text-rose-700">
               Simple Process
             </span>
           </div>
@@ -141,7 +141,7 @@ export default function HowItWorks() {
           >
             Getting Started is
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500">
               Easier Than You Think
             </span>
           </h2>
@@ -161,7 +161,7 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-emerald-200 via-teal-200 to-emerald-200" />
+          <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-rose-200 via-pink-200 to-rose-200" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {steps.map((step, index) => (
@@ -177,12 +177,12 @@ export default function HowItWorks() {
                 {/* Step Card */}
                 <div className="relative bg-neutral-50 rounded-3xl p-8 h-full group hover:bg-white hover:shadow-xl transition-all duration-300">
                   {/* Number Badge */}
-                  <div className="absolute -top-4 left-8 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl text-white font-bold text-sm shadow-lg shadow-emerald-500/25">
+                  <div className="absolute -top-4 left-8 px-4 py-2 bg-gradient-to-r from-rose-400 to-pink-500 rounded-xl text-white font-bold text-sm shadow-lg shadow-rose-500/25">
                     {step.number}
                   </div>
 
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-2xl bg-white border border-neutral-100 flex items-center justify-center text-emerald-600 mt-4 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-2xl bg-white border border-neutral-100 flex items-center justify-center text-rose-500 mt-4 mb-6 group-hover:scale-110 transition-transform duration-300">
                     {step.icon}
                   </div>
 
