@@ -63,7 +63,7 @@ export default function CTA() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Join hundreds of satisfied landlords who&apos;ve discovered the iRent
+          Join hundreds of satisfied landlords who&apos;ve discovered the DAXA
           difference. Get your free consultation today.
         </p>
 
@@ -73,7 +73,7 @@ export default function CTA() {
           }`}
         >
           <Link
-            href="mailto:irentproperties@outlook.com"
+            href="mailto:info@daxamanagement.com"
             className="group px-8 py-4 bg-white text-emerald-600 font-semibold rounded-2xl hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
           >
             <svg
@@ -155,7 +155,7 @@ export default function CTA() {
               </svg>
             </div>
             <h3 className="text-white font-semibold mb-1">Email</h3>
-            <p className="text-white/70">irentproperties@outlook.com</p>
+            <p className="text-white/70">info@daxamanagement.com</p>
           </div>
 
           <div>

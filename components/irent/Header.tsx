@@ -31,12 +31,10 @@ export default function Header() {
             <Link href="/irent" className="flex items-center group">
               <Image
                 src="/irent/logo.jpg"
-                alt="iRent Properties"
+                alt="DAXA Management"
                 width={160}
                 height={50}
-                className={`h-10 w-auto object-contain transition-all duration-300 ${
-                  isScrolled ? "" : "brightness-0 invert"
-                }`}
+                className="h-12 w-auto object-contain"
                 priority
               />
             </Link>

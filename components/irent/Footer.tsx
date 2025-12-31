@@ -13,10 +13,10 @@ export default function Footer() {
             <Link href="/irent" className="inline-block mb-6">
               <Image
                 src="/irent/logo.jpg"
-                alt="iRent Properties"
+                alt="DAXA Management"
                 width={160}
                 height={50}
-                className="h-10 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto object-contain"
               />
             </Link>
             <p className="text-neutral-400 leading-relaxed mb-6">
@@ -138,7 +138,7 @@ export default function Footer() {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  irentproperties@outlook.com
+                  info@daxamanagement.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-neutral-300">
@@ -170,7 +170,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-neutral-500 text-sm">
-            &copy; {new Date().getFullYear()} iRent Properties. All rights
+            &copy; {new Date().getFullYear()} DAXA Management Ltd. All rights
             reserved.
           </p>
           <div className="flex gap-6 text-sm">

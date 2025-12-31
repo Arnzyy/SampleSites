@@ -211,7 +211,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`group relative bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${
+              className={`bg-white rounded-2xl p-8 border border-neutral-200 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -220,7 +220,7 @@ export default function Services() {
             >
               {/* Icon */}
               <div
-                className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
+                className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white mb-6`}
               >
                 {service.icon}
               </div>
@@ -232,12 +232,6 @@ export default function Services() {
               <p className="text-neutral-600 leading-relaxed">
                 {service.description}
               </p>
-
-              {/* Hover Gradient Border */}
-              <div
-                className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl`}
-                style={{ transform: "scale(0.95)" }}
-              />
             </div>
           ))}
         </div>
