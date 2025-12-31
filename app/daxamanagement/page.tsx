@@ -8,7 +8,7 @@ import FAQ from "@/components/irent/FAQ";
 import CTA from "@/components/irent/CTA";
 import Footer from "@/components/irent/Footer";
 
-export default function IRentPage() {
+export default function DaxaManagementPage() {
   return (
     <div className="min-h-screen bg-white antialiased">
       {/* Header */}

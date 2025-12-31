@@ -28,9 +28,9 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/irent" className="flex items-center group">
+            <Link href="/daxamanagement" className="flex items-center group">
               <Image
-                src="/irent/logo.jpg"
+                src="/daxamanagement/logo.png"
                 alt="DAXA Management"
                 width={160}
                 height={50}

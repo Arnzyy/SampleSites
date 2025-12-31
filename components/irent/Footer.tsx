@@ -10,9 +10,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/irent" className="inline-block mb-6">
+            <Link href="/daxamanagement" className="inline-block mb-6">
               <Image
-                src="/irent/logo.jpg"
+                src="/daxamanagement/logo.png"
                 alt="DAXA Management"
                 width={160}
                 height={50}
