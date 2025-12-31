@@ -13,12 +13,13 @@ export default function BrochurePage() {
       <div className="print:hidden fixed top-4 right-4 z-50">
         <button
           onClick={handlePrint}
-          className="px-6 py-3 bg-gradient-to-r from-rose-400 to-pink-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+          className="px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-rose-400 to-pink-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center gap-2 text-sm sm:text-base"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          Download PDF
+          <span className="hidden sm:inline">Download PDF</span>
+          <span className="sm:hidden">PDF</span>
         </button>
       </div>
 
@@ -38,20 +39,20 @@ export default function BrochurePage() {
 
           <div className="relative z-10 h-full flex flex-col">
             {/* Logo */}
-            <div className="p-8">
+            <div className="p-4 sm:p-8">
               <Image
                 src="/daxamanagement/logo.png"
                 alt="DAXA Management"
                 width={180}
                 height={60}
-                className="h-14 w-auto object-contain"
+                className="h-10 sm:h-14 w-auto object-contain"
               />
             </div>
 
             {/* Property Images Grid */}
-            <div className="flex-1 px-8 pb-8">
-              <div className="grid grid-cols-2 gap-4 h-full">
-                <div className="relative rounded-2xl overflow-hidden">
+            <div className="flex-1 px-4 sm:px-8 pb-4 sm:pb-8 min-h-[200px] sm:min-h-0">
+              <div className="grid grid-cols-2 gap-2 sm:gap-4 h-full">
+                <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-auto">
                   <Image
                     src="/daxamanagement/brochure/property1.jpg"
                     alt="Property"
@@ -59,7 +60,7 @@ export default function BrochurePage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="relative rounded-2xl overflow-hidden">
+                <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-auto">
                   <Image
                     src="/daxamanagement/brochure/property2.webp"
                     alt="Property"
@@ -67,7 +68,7 @@ export default function BrochurePage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="relative rounded-2xl overflow-hidden">
+                <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-auto">
                   <Image
                     src="/daxamanagement/brochure/property3.webp"
                     alt="Property"
@@ -75,7 +76,7 @@ export default function BrochurePage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="relative rounded-2xl overflow-hidden">
+                <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-auto">
                   <Image
                     src="/daxamanagement/brochure/property4.jpg"
                     alt="Property"
@@ -87,11 +88,11 @@ export default function BrochurePage() {
             </div>
 
             {/* Tagline */}
-            <div className="p-8 text-center">
-              <h1 className="text-3xl font-bold text-white mb-2">
+            <div className="p-4 sm:p-8 text-center">
+              <h1 className="text-xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">
                 Professional Property Management
               </h1>
-              <p className="text-rose-300 text-lg">
+              <p className="text-rose-300 text-sm sm:text-lg">
                 Taking the stress out of being a landlord
               </p>
             </div>
@@ -100,17 +101,17 @@ export default function BrochurePage() {
 
         {/* Page 2: About Us */}
         <section className="brochure-page bg-white">
-          <div className="h-full flex flex-col items-center justify-center p-12 text-center">
+          <div className="h-full flex flex-col items-center justify-center p-6 sm:p-12 text-center">
             {/* House Icon */}
-            <div className="w-32 h-32 mb-8 text-slate-700">
+            <div className="w-20 h-20 sm:w-32 sm:h-32 mb-4 sm:mb-8 text-slate-700">
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                 <path d="M12 3L2 12h3v9h6v-6h2v6h6v-9h3L12 3zm0 2.84L18 11v8h-2v-6H8v6H6v-8l6-5.16z"/>
               </svg>
             </div>
 
-            <h2 className="text-4xl font-bold text-slate-800 mb-6">About Us</h2>
+            <h2 className="text-2xl sm:text-4xl font-bold text-slate-800 mb-4 sm:mb-6">About Us</h2>
 
-            <div className="max-w-xl space-y-4 text-slate-600 leading-relaxed">
+            <div className="max-w-xl space-y-3 sm:space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
               <p>
                 DAXA Management is a professional HMO property management company
                 based in London. We specialize in managing Houses in Multiple
@@ -134,16 +135,16 @@ export default function BrochurePage() {
 
         {/* Page 3: Introduction / Services Overview */}
         <section className="brochure-page bg-slate-50">
-          <div className="h-full p-12">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-slate-800 mb-4">Our Services</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">
+          <div className="h-full p-6 sm:p-12">
+            <div className="text-center mb-6 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-slate-800 mb-2 sm:mb-4">Our Services</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base">
                 We offer a comprehensive range of property management services
                 designed to make your life easier.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
               {[
                 {
                   title: "Guaranteed Rent",
@@ -178,11 +179,11 @@ export default function BrochurePage() {
               ].map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-sm"
+                  className="bg-white rounded-xl p-4 sm:p-6 shadow-sm"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center mb-3 sm:mb-4">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -195,10 +196,10 @@ export default function BrochurePage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-800 mb-2">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-800 mb-1 sm:mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-slate-600 text-sm">{service.desc}</p>
+                  <p className="text-slate-600 text-xs sm:text-sm">{service.desc}</p>
                 </div>
               ))}
             </div>
@@ -207,14 +208,14 @@ export default function BrochurePage() {
 
         {/* Page 4: Service Cards */}
         <section className="brochure-page bg-white">
-          <div className="h-full p-12">
-            <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold text-slate-800 mb-4">
+          <div className="h-full p-6 sm:p-12">
+            <div className="text-center mb-6 sm:mb-10">
+              <h2 className="text-2xl sm:text-4xl font-bold text-slate-800 mb-2 sm:mb-4">
                 Why Choose DAXA?
               </h2>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
               {[
                 { title: "No Hidden Fees", color: "bg-rose-500", desc: "Transparent pricing with everything included" },
                 { title: "24/7 Support", color: "bg-slate-700", desc: "Round-the-clock emergency assistance" },
@@ -225,33 +226,33 @@ export default function BrochurePage() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className={`${item.color} rounded-2xl p-6 text-white text-center`}
+                  className={`${item.color} rounded-xl sm:rounded-2xl p-3 sm:p-6 text-white text-center`}
                 >
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-white/80 text-sm">{item.desc}</p>
+                  <h3 className="text-sm sm:text-xl font-bold mb-1 sm:mb-2">{item.title}</h3>
+                  <p className="text-white/80 text-xs sm:text-sm hidden sm:block">{item.desc}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 bg-slate-50 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">
+            <div className="mt-6 sm:mt-10 bg-slate-50 rounded-xl sm:rounded-2xl p-4 sm:p-8 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-2 sm:mb-4">
                 Ready to Get Started?
               </h3>
-              <p className="text-slate-600 mb-6">
+              <p className="text-slate-600 mb-4 sm:mb-6 text-sm sm:text-base">
                 Contact us today for a free, no-obligation consultation.
               </p>
-              <div className="flex justify-center gap-8 text-slate-700">
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-8 text-slate-700 text-sm sm:text-base">
+                <div className="flex items-center justify-center gap-2">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <span>020 3669 4166</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center justify-center gap-2">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span>info@daxamanagement.com</span>
+                  <span className="text-xs sm:text-base">info@daxamanagement.com</span>
                 </div>
               </div>
             </div>
@@ -260,73 +261,73 @@ export default function BrochurePage() {
 
         {/* Page 5: Numbers Comparison */}
         <section className="brochure-page bg-slate-800">
-          <div className="h-full p-12">
-            <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold text-white mb-4">
+          <div className="h-full p-6 sm:p-12">
+            <div className="text-center mb-6 sm:mb-10">
+              <h2 className="text-2xl sm:text-4xl font-bold text-white mb-2 sm:mb-4">
                 The Numbers Speak
               </h2>
-              <p className="text-slate-300">
+              <p className="text-slate-300 text-sm sm:text-base">
                 See how we compare to self-managing your property
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl overflow-hidden">
-              <table className="w-full">
+            <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden overflow-x-auto">
+              <table className="w-full text-xs sm:text-base">
                 <thead>
                   <tr className="bg-slate-100">
-                    <th className="text-left p-4 text-slate-800 font-semibold">Item</th>
-                    <th className="text-center p-4 text-slate-800 font-semibold">Self-Managed</th>
-                    <th className="text-center p-4 text-rose-600 font-semibold">With DAXA</th>
+                    <th className="text-left p-2 sm:p-4 text-slate-800 font-semibold">Item</th>
+                    <th className="text-center p-2 sm:p-4 text-slate-800 font-semibold">Self-Managed</th>
+                    <th className="text-center p-2 sm:p-4 text-rose-600 font-semibold">With DAXA</th>
                   </tr>
                 </thead>
                 <tbody className="text-slate-700">
                   <tr className="border-t">
-                    <td className="p-4">Time spent per month</td>
-                    <td className="text-center p-4">20+ hours</td>
-                    <td className="text-center p-4 text-rose-600 font-semibold">0 hours</td>
+                    <td className="p-2 sm:p-4">Time spent/month</td>
+                    <td className="text-center p-2 sm:p-4">20+ hours</td>
+                    <td className="text-center p-2 sm:p-4 text-rose-600 font-semibold">0 hours</td>
                   </tr>
                   <tr className="border-t bg-slate-50">
-                    <td className="p-4">Average void period</td>
-                    <td className="text-center p-4">4-6 weeks</td>
-                    <td className="text-center p-4 text-rose-600 font-semibold">2-3 weeks</td>
+                    <td className="p-2 sm:p-4">Void period</td>
+                    <td className="text-center p-2 sm:p-4">4-6 weeks</td>
+                    <td className="text-center p-2 sm:p-4 text-rose-600 font-semibold">2-3 weeks</td>
                   </tr>
                   <tr className="border-t">
-                    <td className="p-4">Emergency callouts</td>
-                    <td className="text-center p-4">Your problem</td>
-                    <td className="text-center p-4 text-rose-600 font-semibold">Handled 24/7</td>
+                    <td className="p-2 sm:p-4">Emergency callouts</td>
+                    <td className="text-center p-2 sm:p-4">Your problem</td>
+                    <td className="text-center p-2 sm:p-4 text-rose-600 font-semibold">Handled 24/7</td>
                   </tr>
                   <tr className="border-t bg-slate-50">
-                    <td className="p-4">Compliance stress</td>
-                    <td className="text-center p-4">High</td>
-                    <td className="text-center p-4 text-rose-600 font-semibold">Zero</td>
+                    <td className="p-2 sm:p-4">Compliance stress</td>
+                    <td className="text-center p-2 sm:p-4">High</td>
+                    <td className="text-center p-2 sm:p-4 text-rose-600 font-semibold">Zero</td>
                   </tr>
                   <tr className="border-t">
-                    <td className="p-4">Rent arrears risk</td>
-                    <td className="text-center p-4">100%</td>
-                    <td className="text-center p-4 text-rose-600 font-semibold">Guaranteed*</td>
+                    <td className="p-2 sm:p-4">Rent arrears risk</td>
+                    <td className="text-center p-2 sm:p-4">100%</td>
+                    <td className="text-center p-2 sm:p-4 text-rose-600 font-semibold">Guaranteed*</td>
                   </tr>
                   <tr className="border-t bg-slate-50">
-                    <td className="p-4">Peace of mind</td>
-                    <td className="text-center p-4">Limited</td>
-                    <td className="text-center p-4 text-rose-600 font-semibold">Complete</td>
+                    <td className="p-2 sm:p-4">Peace of mind</td>
+                    <td className="text-center p-2 sm:p-4">Limited</td>
+                    <td className="text-center p-2 sm:p-4 text-rose-600 font-semibold">Complete</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <p className="text-slate-400 text-sm text-center mt-4">
+            <p className="text-slate-400 text-xs sm:text-sm text-center mt-3 sm:mt-4">
               *With our Rent Guarantee service
             </p>
 
-            <div className="mt-8 text-center">
+            <div className="mt-6 sm:mt-8 text-center">
               <Image
                 src="/daxamanagement/logo.png"
                 alt="DAXA Management"
                 width={150}
                 height={50}
-                className="mx-auto h-12 w-auto object-contain"
+                className="mx-auto h-8 sm:h-12 w-auto object-contain"
               />
-              <p className="text-slate-400 mt-4">
+              <p className="text-slate-400 mt-2 sm:mt-4 text-sm">
                 www.daxamanagement.com
               </p>
             </div>
@@ -361,9 +362,23 @@ export default function BrochurePage() {
 
         @media screen {
           .brochure-container {
-            max-width: 210mm;
+            max-width: 100%;
             margin: 0 auto;
             background: #f1f5f9;
+            padding: 0;
+          }
+          .brochure-page {
+            min-height: auto;
+            width: 100%;
+            margin: 0;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          .brochure-container {
+            max-width: 210mm;
             padding: 20px 0;
           }
           .brochure-page {
