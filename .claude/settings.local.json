@@ -10,7 +10,11 @@
       "Bash(git commit:*)",
       "Bash(git push)",
       "Bash(npm install:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(copy \"C:\\\\Users\\\\Billy\\\\Downloads\\\\ChatGPT Image Dec 31, 2025, 11_22_36 AM.png\" \"c:\\\\Users\\\\Billy\\\\Documents\\\\GitHub\\\\SampleSites\\\\public\\\\daxamanagement\\\\logo.png\")",
+      "Bash(magick:*)",
+      "Bash(copy:*)",
+      "Bash(cat:*)"
     ]
   }
 }

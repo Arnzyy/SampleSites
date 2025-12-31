@@ -53,7 +53,7 @@ export default function BrochurePage() {
               <div className="grid grid-cols-2 gap-4 h-full">
                 <div className="relative rounded-2xl overflow-hidden">
                   <Image
-                    src="/daxamanagement/brochure/property1.jfif"
+                    src="/daxamanagement/brochure/property1.jpg"
                     alt="Property"
                     fill
                     className="object-cover"
