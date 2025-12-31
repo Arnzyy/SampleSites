@@ -14,9 +14,9 @@ export default function Footer() {
               <Image
                 src="/daxamanagement/logo.png"
                 alt="DAXA Management"
-                width={160}
-                height={50}
-                className="h-12 w-auto object-contain"
+                width={200}
+                height={70}
+                className="h-16 w-auto object-contain"
               />
             </Link>
             <p className="text-neutral-400 leading-relaxed mb-6">
