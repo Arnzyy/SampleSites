@@ -20,7 +20,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-neutral-400 leading-relaxed mb-6">
-              Professional HMO property management in London. We take the stress
+              Professional HMO property management in Bristol. We take the stress
               out of being a landlord.
             </p>
             <div className="flex gap-4">
@@ -122,7 +122,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:irentproperties@outlook.com"
+                  href="mailto:info@daxamanagement.com"
                   className="flex items-center gap-3 text-neutral-300 hover:text-rose-400 transition-colors"
                 >
                   <svg
@@ -161,7 +161,7 @@ export default function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                London, United Kingdom
+                Bristol, United Kingdom
               </li>
             </ul>
           </div>

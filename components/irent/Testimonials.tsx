@@ -5,14 +5,14 @@ import { useEffect, useRef, useState } from "react";
 const testimonials = [
   {
     quote:
-      "iRent Properties transformed my HMO investment experience. They found quality tenants within days and handle everything so professionally. My rental income has never been more consistent.",
+      "DAXA Management transformed my HMO investment experience. They found quality tenants within days and handle everything so professionally. My rental income has never been more consistent.",
     author: "Michael Thompson",
     role: "Landlord, 3 Properties",
     rating: 5,
   },
   {
     quote:
-      "After years of dealing with unreliable agents, iRent was a breath of fresh air. Their communication is excellent - I always know exactly what's happening with my properties.",
+      "After years of dealing with unreliable agents, DAXA Management was a breath of fresh air. Their communication is excellent - I always know exactly what's happening with my properties.",
     author: "Sarah Chen",
     role: "Property Investor",
     rating: 5,
@@ -75,7 +75,7 @@ export default function Testimonials() {
             Loved by Landlords
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500">
-              Across London
+              Across Bristol
             </span>
           </h2>
         </div>

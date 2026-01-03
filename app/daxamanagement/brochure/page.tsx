@@ -114,12 +114,12 @@ export default function BrochurePage() {
             <div className="max-w-xl space-y-3 sm:space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
               <p>
                 DAXA Management is a professional HMO property management company
-                based in London. We specialize in managing Houses in Multiple
+                based in Bristol. We specialize in managing Houses in Multiple
                 Occupation, providing landlords with a complete, hands-off
                 property management solution.
               </p>
               <p>
-                With years of experience in the London rental market, we understand
+                With years of experience in the Bristol rental market, we understand
                 the unique challenges that come with HMO properties. Our dedicated
                 team handles everything from tenant sourcing and rent collection
                 to maintenance and compliance management.

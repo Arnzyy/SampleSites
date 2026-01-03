@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "What types of properties do you manage?",
     answer:
-      "We specialize in HMO (House in Multiple Occupation) properties across London. This includes shared houses, student accommodation, and multi-let properties. We have extensive experience with both licensed and non-licensed HMOs.",
+      "We specialize in HMO (House in Multiple Occupation) properties across Bristol. This includes shared houses, student accommodation, and multi-let properties. We have extensive experience with both licensed and non-licensed HMOs.",
   },
   {
     question: "How much do your services cost?",

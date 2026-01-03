@@ -42,7 +42,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
             <span className="text-sm text-white/70">
-              Trusted HMO Property Management in London
+              Trusted HMO Property Management in Bristol
             </span>
           </div>
 
