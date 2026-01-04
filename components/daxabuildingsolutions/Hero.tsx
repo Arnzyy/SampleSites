@@ -92,8 +92,8 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/90 via-neutral-900/70 to-neutral-900/90" />
+      {/* Overlay - blue tint for differentiation */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/80 to-blue-950/90" />
 
       {/* Animated Orbs */}
       <div
@@ -114,34 +114,23 @@ export default function Hero() {
         }}
       />
 
-      {/* Content */}
+      {/* Content - Center aligned */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
-        <div className="max-w-4xl">
-          {/* Badge */}
-          <div
-            className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 transition-all duration-1000 ${
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Checkatrade Badge */}
+          <a
+            href="https://www.checkatrade.com/trades/daxabuildingsolutions993285"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500/10 border border-green-500/20 backdrop-blur-sm mb-8 transition-all duration-1000 hover:bg-green-500/20 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E91E8C] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E91E8C]" />
-            </span>
-            <span className="text-sm text-white/80 font-medium">
-              50+ Years Combined Experience
-            </span>
-            <a
-              href="https://www.checkatrade.com/trades/daxabuildingsolutions993285"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1 text-sm text-[#38BDF8]"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              Checkatrade Approved
-            </a>
-          </div>
+            <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            <span className="text-sm text-green-300 font-medium">Checkatrade Approved</span>
+          </a>
 
           {/* Headline */}
           <h1
@@ -179,9 +168,9 @@ export default function Hero() {
             From extensions to complete renovations — we bring your vision to life.
           </p>
 
-          {/* CTAs */}
+          {/* CTAs - Centered */}
           <div
-            className={`flex flex-col sm:flex-row gap-4 mb-16 transition-all duration-1000 delay-450 ${
+            className={`flex flex-col sm:flex-row justify-center gap-4 mb-16 transition-all duration-1000 delay-450 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -196,42 +185,28 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF] via-[#1D4ED8] to-[#BE185D] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </a>
             <a
-              href="#services"
+              href="tel:07411179660"
               className="px-8 py-4 bg-white/5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              View Our Services
+              07411 179660
             </a>
           </div>
 
-          {/* Stats */}
+          {/* Stats - Glass cards */}
           <div
-            className={`flex flex-wrap items-center gap-8 lg:gap-12 transition-all duration-1000 delay-600 ${
+            className={`grid grid-cols-3 gap-4 max-w-2xl mx-auto transition-all duration-1000 delay-600 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             {stats.map((stat, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-                  index === 0 ? "bg-[#E91E8C]/20" : index === 1 ? "bg-[#38BDF8]/20" : "bg-white/10"
-                }`}>
-                  <svg className={`w-6 h-6 ${index === 0 ? "text-[#E91E8C]" : index === 1 ? "text-[#38BDF8]" : "text-white"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    {index === 0 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />}
-                    {index === 1 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />}
-                    {index === 2 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />}
-                  </svg>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                  <Counter target={stat.number} suffix={stat.suffix} />
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-white">
-                    <Counter target={stat.number} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-sm text-white/50">{stat.label}</div>
-                </div>
-                {index < stats.length - 1 && (
-                  <div className="h-12 w-px bg-white/10 ml-4 hidden sm:block" />
-                )}
+                <div className="text-xs sm:text-sm text-white/50">{stat.label}</div>
               </div>
             ))}
           </div>
