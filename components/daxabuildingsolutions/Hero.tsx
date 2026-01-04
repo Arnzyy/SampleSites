@@ -91,8 +91,14 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Overlay - blue tint for differentiation */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/80 to-blue-950/90" />
+      {/* Overlay - directional gradient with depth */}
+      <div className="absolute inset-0">
+        {/* Dark edges and bottom for framing */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-slate-900/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-transparent to-slate-900/80" />
+        {/* Subtle brand color accents at edges */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#BE185D]/10 via-transparent to-[#1E40AF]/15" />
+      </div>
 
       {/* Animated Orbs */}
       <div
