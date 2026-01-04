@@ -127,12 +127,17 @@ export default function Hero() {
           <span className="text-xs sm:text-sm text-white/80 font-medium">
             50+ Years Combined Experience
           </span>
-          <span className="hidden sm:inline-flex items-center gap-1 text-xs sm:text-sm text-sky-400">
+          <a
+            href="https://www.checkatrade.com/trades/daxabuildingsolutions993285"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1 text-xs sm:text-sm text-sky-400 hover:text-sky-300 transition-colors"
+          >
             <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             Checkatrade Approved
-          </span>
+          </a>
         </div>
 
         {/* Main Headline */}
@@ -271,7 +276,12 @@ export default function Hero() {
 
           <div className="h-8 sm:h-12 w-px bg-white/10 hidden lg:block" />
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href="https://www.checkatrade.com/trades/daxabuildingsolutions993285"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity"
+          >
             <div className="flex -space-x-1 sm:-space-x-2">
               {[1, 2, 3, 4, 5].map((i) => (
                 <div
@@ -288,7 +298,7 @@ export default function Hero() {
               <div className="text-lg sm:text-2xl font-bold text-white">5.0</div>
               <div className="text-xs sm:text-sm text-white/50">Checkatrade</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 

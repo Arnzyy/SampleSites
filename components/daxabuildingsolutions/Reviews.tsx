@@ -204,17 +204,22 @@ export default function Reviews() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="flex items-center gap-4 px-8 py-4 rounded-2xl bg-neutral-50 border border-neutral-100">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-            </div>
+          <a
+            href="https://www.checkatrade.com/trades/daxabuildingsolutions993285"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 px-8 py-4 rounded-2xl bg-neutral-50 border border-neutral-100 hover:shadow-lg hover:border-sky-200 transition-all duration-300"
+          >
+            <img
+              src="/daxabuildingsolutions/checkatrade.png"
+              alt="Checkatrade Approved"
+              className="h-14 w-auto"
+            />
             <div>
               <div className="font-semibold text-neutral-900">Checkatrade Approved</div>
-              <div className="text-sm text-neutral-500">Verified reviews from real customers</div>
+              <div className="text-sm text-neutral-500">View our verified reviews</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

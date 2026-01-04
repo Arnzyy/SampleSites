@@ -49,12 +49,20 @@ export default function Footer() {
               <p className="text-white/50 text-sm leading-relaxed mb-4 sm:mb-6">
                 Family-run building company with 50+ years combined experience. Quality craftsmanship across Somerset.
               </p>
-              <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 w-fit">
-                <svg className="w-5 h-5 text-sky-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-white/70 text-sm">Checkatrade Approved</span>
-              </div>
+              <a
+                href="https://www.checkatrade.com/trades/daxabuildingsolutions993285"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/daxabuildingsolutions/checkatrade.png"
+                  alt="Checkatrade Approved"
+                  width={120}
+                  height={60}
+                  className="h-12 w-auto"
+                />
+              </a>
             </div>
 
             {/* Services */}
