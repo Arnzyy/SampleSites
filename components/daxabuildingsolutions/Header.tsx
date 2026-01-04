@@ -28,7 +28,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white shadow-sm"
+          ? "bg-white/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -40,10 +40,10 @@ export default function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+                className={`text-sm font-medium tracking-wide transition-colors ${
                   isScrolled
-                    ? "text-neutral-700"
-                    : "text-white/90"
+                    ? "text-neutral-700 hover:text-[#E91E8C]"
+                    : "text-white hover:text-[#E91E8C]"
                 }`}
               >
                 {link.name}
@@ -58,9 +58,7 @@ export default function Header() {
               alt="DAXA Building Solutions"
               width={200}
               height={70}
-              className={`h-14 lg:h-16 w-auto object-contain transition-all ${
-                isScrolled ? "" : "brightness-0 invert"
-              }`}
+              className="h-12 lg:h-14 w-auto object-contain"
               priority
             />
           </Link>
@@ -71,10 +69,10 @@ export default function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+                className={`text-sm font-medium tracking-wide transition-colors ${
                   isScrolled
-                    ? "text-neutral-700"
-                    : "text-white/90"
+                    ? "text-neutral-700 hover:text-[#E91E8C]"
+                    : "text-white hover:text-[#E91E8C]"
                 }`}
               >
                 {link.name}
@@ -82,11 +80,7 @@ export default function Header() {
             ))}
             <a
               href="tel:07411179660"
-              className={`text-sm font-medium tracking-wide transition-colors ${
-                isScrolled
-                  ? "text-neutral-900"
-                  : "text-white"
-              }`}
+              className="px-6 py-2.5 bg-[#E91E8C] text-white text-sm font-medium rounded-full hover:bg-[#38BDF8] transition-colors"
             >
               07411 179660
             </a>
@@ -95,8 +89,8 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5 ${
-              isMobileMenuOpen || isScrolled ? "text-neutral-900" : "text-white"
+            className={`lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 ${
+              isMobileMenuOpen ? "text-neutral-900" : isScrolled ? "text-neutral-900" : "text-white"
             }`}
           >
             <span
@@ -127,19 +121,22 @@ export default function Header() {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-medium text-neutral-900 tracking-wide uppercase"
+              className="text-2xl font-semibold text-neutral-900 hover:text-[#E91E8C] transition-colors"
+              style={{
+                transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : "0ms",
+              }}
             >
               {link.name}
             </a>
           ))}
           <a
             href="tel:07411179660"
-            className="mt-4 text-lg font-medium text-neutral-600"
+            className="mt-4 px-8 py-3 bg-[#E91E8C] text-white font-semibold rounded-full"
           >
             07411 179660
           </a>

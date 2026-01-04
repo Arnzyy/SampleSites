@@ -6,57 +6,110 @@ import Link from "next/link";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  return (
-    <footer className="bg-neutral-900 py-16">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-          {/* Logo */}
-          <Link href="/daxabuildingsolutions">
-            <Image
-              src="/daxabuildingsolutions/logo.png"
-              alt="DAXA Building Solutions"
-              width={160}
-              height={55}
-              className="h-12 w-auto brightness-0 invert"
-            />
-          </Link>
+  const services = [
+    "Extensions",
+    "Loft Conversions",
+    "Knock Throughs",
+    "Renovations",
+    "New Builds",
+    "Garden Work",
+  ];
 
-          {/* Nav Links */}
-          <nav className="flex flex-wrap gap-8">
+  return (
+    <footer className="bg-neutral-950 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <Link href="/daxabuildingsolutions" className="inline-block mb-6">
+              <Image
+                src="/daxabuildingsolutions/logo.png"
+                alt="DAXA Building Solutions"
+                width={180}
+                height={60}
+                className="h-12 w-auto"
+              />
+            </Link>
+            <p className="text-white/50 mb-6 max-w-md">
+              Family-run building company with 50+ years combined experience. Quality craftsmanship delivered across Somerset.
+            </p>
+            <a
+              href="https://www.checkatrade.com/trades/daxabuildingsolutions993285"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Image
+                src="/daxabuildingsolutions/checkatrade.png"
+                alt="Checkatrade Approved"
+                width={120}
+                height={60}
+                className="h-12 w-auto"
+              />
+            </a>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-semibold mb-6">Services</h3>
+            <ul className="space-y-3">
+              {services.map((service) => (
+                <li key={service}>
+                  <a href="#services" className="text-white/50 hover:text-[#E91E8C] transition-colors text-sm">
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-white font-semibold mb-6">Contact</h3>
+            <ul className="space-y-4">
+              <li>
+                <a href="tel:07411179660" className="flex items-center gap-3 text-white/50 hover:text-[#E91E8C] transition-colors text-sm">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  07411 179660
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@daxabuildingsolutions.co.uk" className="flex items-center gap-3 text-white/50 hover:text-[#38BDF8] transition-colors text-sm break-all">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  info@daxabuildingsolutions.co.uk
+                </a>
+              </li>
+              <li className="flex items-start gap-3 text-white/50 text-sm">
+                <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Keynsham, Somerset BS31 2SE
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="text-white/30 text-sm">
+            &copy; {currentYear} DAXA Building Solutions. All rights reserved.
+          </p>
+          <nav className="flex gap-6">
             {["Home", "Services", "Gallery", "Reviews", "Contact"].map((link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-white/50 text-sm tracking-wide uppercase"
+                className="text-white/30 hover:text-white/60 text-sm transition-colors"
               >
                 {link}
               </a>
             ))}
           </nav>
-
-          {/* Checkatrade */}
-          <a
-            href="https://www.checkatrade.com/trades/daxabuildingsolutions993285"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/daxabuildingsolutions/checkatrade.png"
-              alt="Checkatrade Approved"
-              width={100}
-              height={50}
-              className="h-10 w-auto"
-            />
-          </a>
-        </div>
-
-        {/* Divider */}
-        <div className="h-px bg-white/10 my-12" />
-
-        {/* Bottom */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-white/30 text-sm">
-          <p>&copy; {currentYear} DAXA Building Solutions. All rights reserved.</p>
-          <p>Keynsham, Somerset</p>
         </div>
       </div>
     </footer>
