@@ -28,33 +28,53 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg shadow-black/5"
+          ? "bg-white shadow-sm"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-24">
-          {/* Logo */}
+          {/* Left Nav */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {navLinks.slice(0, 3).map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+                  isScrolled
+                    ? "text-neutral-700"
+                    : "text-white/90"
+                }`}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+
+          {/* Center Logo */}
           <Link href="/daxabuildingsolutions" className="relative z-10">
             <Image
               src="/daxabuildingsolutions/logo.png"
               alt="DAXA Building Solutions"
-              width={180}
-              height={60}
-              className="h-12 lg:h-14 w-auto object-contain"
+              width={200}
+              height={70}
+              className={`h-14 lg:h-16 w-auto object-contain transition-all ${
+                isScrolled ? "" : "brightness-0 invert"
+              }`}
+              priority
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
+          {/* Right Nav */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {navLinks.slice(3).map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`text-sm font-medium tracking-wide uppercase transition-colors ${
                   isScrolled
-                    ? "text-neutral-700 hover:text-sky-500 hover:bg-sky-50"
-                    : "text-white/90 hover:text-white hover:bg-white/10"
+                    ? "text-neutral-700"
+                    : "text-white/90"
                 }`}
               >
                 {link.name}
@@ -62,7 +82,11 @@ export default function Header() {
             ))}
             <a
               href="tel:07411179660"
-              className="ml-4 px-6 py-2.5 bg-gradient-to-r from-pink-400 to-sky-400 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-pink-500/25 transition-all duration-300 hover:-translate-y-0.5"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                isScrolled
+                  ? "text-neutral-900"
+                  : "text-white"
+              }`}
             >
               07411 179660
             </a>
@@ -72,7 +96,7 @@ export default function Header() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5 ${
-              isScrolled ? "text-neutral-900" : "text-white"
+              isMobileMenuOpen || isScrolled ? "text-neutral-900" : "text-white"
             }`}
           >
             <span
@@ -102,23 +126,20 @@ export default function Header() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col items-center justify-center h-full gap-6">
-          {navLinks.map((link, index) => (
+        <div className="flex flex-col items-center justify-center h-full gap-8">
+          {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl font-semibold text-neutral-900 hover:text-sky-500 transition-colors"
-              style={{
-                transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : "0ms",
-              }}
+              className="text-xl font-medium text-neutral-900 tracking-wide uppercase"
             >
               {link.name}
             </a>
           ))}
           <a
             href="tel:07411179660"
-            className="mt-4 px-8 py-3 bg-gradient-to-r from-pink-400 to-sky-400 text-white font-semibold rounded-full"
+            className="mt-4 text-lg font-medium text-neutral-600"
           >
             07411 179660
           </a>

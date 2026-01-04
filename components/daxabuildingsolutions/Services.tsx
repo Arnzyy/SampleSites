@@ -5,177 +5,171 @@ import { useEffect, useRef, useState } from "react";
 const services = [
   {
     title: "Extensions",
-    description:
-      "Transform your living space with beautifully designed extensions that seamlessly blend with your existing home.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-    gradient: "from-pink-500 to-rose-500",
+    description: "Transform your living space with beautifully designed extensions that seamlessly blend with your existing home.",
+    image: "/daxabuildingsolutions/gallery/001.jpg",
+    number: "01",
   },
   {
     title: "Loft Conversions",
-    description:
-      "Unlock hidden potential in your home with expert loft conversions, adding valuable living space and property value.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
-    gradient: "from-sky-500 to-cyan-500",
+    description: "Unlock hidden potential in your home with expert loft conversions, adding valuable living space.",
+    image: "/daxabuildingsolutions/gallery/002.jpg",
+    number: "02",
   },
   {
     title: "Knock Throughs",
-    description:
-      "Create open-plan living with structural knock throughs, modernizing your home layout for contemporary living.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-      </svg>
-    ),
-    gradient: "from-violet-500 to-purple-500",
+    description: "Create open-plan living with structural knock throughs, modernizing your home for contemporary living.",
+    image: "/daxabuildingsolutions/gallery/003.jpg",
+    number: "03",
   },
   {
     title: "Renovations",
-    description:
-      "Complete home renovations handled from start to finish, breathing new life into tired properties.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-      </svg>
-    ),
-    gradient: "from-amber-500 to-orange-500",
+    description: "Complete home renovations handled from start to finish, breathing new life into tired properties.",
+    image: "/daxabuildingsolutions/gallery/004.jpg",
+    number: "04",
   },
   {
     title: "New Builds",
-    description:
-      "From foundations to finishing touches, we deliver quality new build construction projects on time and on budget.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-    gradient: "from-emerald-500 to-teal-500",
+    description: "From foundations to finishing touches, we deliver quality new build construction on time and budget.",
+    image: "/daxabuildingsolutions/gallery/005.jpg",
+    number: "05",
   },
   {
-    title: "Garden & Landscaping",
-    description:
-      "Transform your outdoor space with summer houses, patios, decking, and complete garden makeovers.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
-    gradient: "from-lime-500 to-green-500",
+    title: "Garden Work",
+    description: "Transform outdoor spaces with summer houses, patios, decking, and complete garden makeovers.",
+    image: "/daxabuildingsolutions/gallery/006.jpg",
+    number: "06",
   },
 ];
 
 export default function Services() {
-  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const [activeService, setActiveService] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute("data-index") || "0");
-            setVisibleCards((prev) => [...new Set([...prev, index])]);
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.2 }
     );
-
-    const cards = sectionRef.current?.querySelectorAll("[data-index]");
-    cards?.forEach((card) => observer.observe(card));
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="relative py-24 lg:py-32 bg-white overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-pink-100/50 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-sky-100/50 to-transparent rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+    <section id="services" ref={sectionRef} className="relative bg-neutral-900 overflow-hidden">
+      {/* Large Background Number */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 text-[40vw] font-bold text-white/[0.02] leading-none pointer-events-none select-none">
+        {services[activeService].number}
+      </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-50 border border-pink-100 mb-6">
-            <span className="w-2 h-2 bg-pink-500 rounded-full" />
-            <span className="text-sm font-medium text-pink-600">Our Services</span>
+      <div className="relative min-h-screen flex flex-col lg:flex-row">
+        {/* Left Side - Service List */}
+        <div className="lg:w-1/2 flex flex-col justify-center py-20 lg:py-0 px-6 sm:px-12 lg:px-16 xl:px-24">
+          <div
+            className={`transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <p className="text-[#d4a574] text-sm tracking-[0.3em] uppercase mb-6">
+              Our Expertise
+            </p>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mb-16 leading-tight">
+              What We<br />
+              <span className="font-serif italic">Specialise In</span>
+            </h2>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
-            Building Excellence,{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-sky-500">
-              One Project at a Time
-            </span>
-          </h2>
-          <p className="text-lg text-neutral-600 leading-relaxed">
-            From concept to completion, we deliver outstanding craftsmanship across every aspect of construction
-            and renovation. Whatever your vision, we have the expertise to make it reality.
-          </p>
-        </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              data-index={index}
-              className={`group relative p-8 rounded-3xl bg-white border border-neutral-100 shadow-sm hover:shadow-2xl hover:shadow-neutral-200/50 transition-all duration-500 hover:-translate-y-2 ${
-                visibleCards.includes(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              {/* Gradient Border on Hover */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-pink-500 via-purple-500 to-sky-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl" />
-              <div className="absolute inset-[1px] rounded-3xl bg-white -z-5" />
-
-              {/* Icon */}
-              <div
-                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}
+          <div className="space-y-0">
+            {services.map((service, index) => (
+              <button
+                key={service.title}
+                onClick={() => setActiveService(index)}
+                className={`w-full text-left py-6 border-t border-white/10 flex items-center justify-between group transition-all duration-500 ${
+                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+                }`}
+                style={{ transitionDelay: `${index * 100 + 200}ms` }}
               >
-                {service.icon}
-              </div>
-
-              {/* Content */}
-              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-sky-500 transition-all duration-300">
-                {service.title}
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">{service.description}</p>
-
-              {/* Arrow */}
-              <div className="mt-6 flex items-center gap-2 text-neutral-400 group-hover:text-pink-500 transition-colors duration-300">
-                <span className="text-sm font-medium">Learn more</span>
+                <div className="flex items-center gap-6">
+                  <span
+                    className={`text-sm font-light transition-colors ${
+                      activeService === index ? "text-[#d4a574]" : "text-white/30"
+                    }`}
+                  >
+                    {service.number}
+                  </span>
+                  <span
+                    className={`text-2xl sm:text-3xl lg:text-4xl font-light transition-all ${
+                      activeService === index
+                        ? "text-white translate-x-4"
+                        : "text-white/50"
+                    }`}
+                  >
+                    {service.title}
+                  </span>
+                </div>
                 <svg
-                  className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300"
+                  className={`w-6 h-6 transition-all ${
+                    activeService === index
+                      ? "text-[#d4a574] rotate-0"
+                      : "text-white/20 -rotate-45"
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Side - Active Service Image & Details */}
+        <div className="lg:w-1/2 relative min-h-[60vh] lg:min-h-screen">
+          {services.map((service, index) => (
+            <div
+              key={service.title}
+              className={`absolute inset-0 transition-all duration-700 ${
+                activeService === index ? "opacity-100 z-10" : "opacity-0 z-0"
+              }`}
+            >
+              {/* Image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url('${service.image}')` }}
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-12 lg:p-16">
+                <p
+                  className={`text-white/70 text-lg leading-relaxed max-w-md transition-all duration-500 ${
+                    activeService === index
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                  style={{ transitionDelay: "200ms" }}
+                >
+                  {service.description}
+                </p>
+                <a
+                  href="#contact"
+                  className={`inline-flex items-center gap-3 mt-8 text-white text-sm tracking-widest uppercase transition-all duration-500 ${
+                    activeService === index
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                  style={{ transitionDelay: "300ms" }}
+                >
+                  <span>Get a Quote</span>
+                  <span className="w-12 h-px bg-[#d4a574]" />
+                </a>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-pink-500 to-sky-500 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 hover:-translate-y-1"
-          >
-            Discuss Your Project
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>
