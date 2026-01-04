@@ -80,7 +80,7 @@ export default function Header() {
             ))}
             <a
               href="tel:07411179660"
-              className="px-6 py-2.5 bg-gradient-to-r from-[#E91E8C] to-[#C4177A] text-white text-sm font-medium rounded-lg shadow-md shadow-[#E91E8C]/30 hover:shadow-lg hover:shadow-[#E91E8C]/40 hover:from-[#38BDF8] hover:to-[#0EA5E9] hover:shadow-[#38BDF8]/40 transition-all duration-300"
+              className="px-6 py-2.5 bg-gradient-to-r from-[#BE185D] to-[#9D174D] text-white text-sm font-medium rounded-xl shadow-md shadow-black/20 hover:shadow-lg hover:from-[#2563EB] hover:to-[#1D4ED8] transition-all duration-300"
             >
               07411 179660
             </a>
@@ -136,7 +136,7 @@ export default function Header() {
           ))}
           <a
             href="tel:07411179660"
-            className="mt-4 px-8 py-4 bg-gradient-to-r from-[#E91E8C] to-[#C4177A] text-white font-semibold rounded-xl shadow-lg shadow-[#E91E8C]/30"
+            className="mt-4 px-8 py-4 bg-gradient-to-r from-[#BE185D] to-[#9D174D] text-white font-semibold rounded-xl shadow-lg shadow-black/20"
           >
             07411 179660
           </a>

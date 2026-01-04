@@ -109,8 +109,8 @@ export default function Services() {
                 }`} />
 
                 {/* Icon */}
-                <div className={`absolute top-4 left-4 w-12 h-12 rounded-lg bg-gradient-to-br from-[#E91E8C] to-[#C4177A] flex items-center justify-center shadow-lg shadow-[#E91E8C]/40 transition-all duration-500 ${
-                  hoveredIndex === index ? "scale-105 from-[#38BDF8] to-[#0EA5E9] shadow-[#38BDF8]/40" : ""
+                <div className={`absolute top-4 left-4 w-12 h-12 rounded-lg bg-gradient-to-br from-[#BE185D] to-[#9D174D] flex items-center justify-center shadow-lg shadow-black/30 transition-all duration-500 ${
+                  hoveredIndex === index ? "scale-105 from-[#1E40AF] to-[#1D4ED8]" : ""
                 }`}>
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={service.icon} />

@@ -187,13 +187,13 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="group relative px-8 py-4 bg-gradient-to-br from-[#E91E8C] via-[#D91A82] to-[#38BDF8] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 shadow-lg shadow-[#E91E8C]/30 hover:shadow-xl hover:shadow-[#E91E8C]/40 hover:-translate-y-0.5 flex items-center justify-center gap-3"
+              className="group relative px-8 py-4 bg-gradient-to-br from-[#BE185D] via-[#9D174D] to-[#1E40AF] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 shadow-lg shadow-black/25 hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-3"
             >
               <span className="relative z-10">Get Free Quote</span>
               <svg className="relative z-10 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-              <div className="absolute inset-0 bg-gradient-to-br from-[#38BDF8] via-[#2AAAE6] to-[#E91E8C] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF] via-[#1D4ED8] to-[#BE185D] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </a>
             <a
               href="#services"
