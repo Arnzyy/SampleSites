@@ -35,30 +35,27 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 ${
+          className={`text-center max-w-2xl mx-auto mb-14 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="inline-block px-4 py-1.5 bg-[#38BDF8]/10 text-[#38BDF8] text-sm font-semibold rounded-full mb-4">
-            Our Portfolio
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Projects That <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E91E8C] to-[#38BDF8]">Speak for Themselves</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Recent Projects
           </h2>
-          <p className="text-white/60 text-lg">
-            Browse our collection of completed projects showcasing our commitment to quality craftsmanship.
+          <p className="text-white/50 text-lg leading-relaxed">
+            A selection of our completed work across Somerset.
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative aspect-square overflow-hidden rounded-2xl cursor-pointer transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`group relative aspect-square overflow-hidden rounded-lg transition-all duration-500 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               } ${index === 0 || index === 5 ? "md:col-span-2 md:row-span-2" : ""}`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ transitionDelay: `${index * 60}ms` }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -66,44 +63,25 @@ export default function Gallery() {
                 src={project.image}
                 alt={project.title}
                 fill
-                className={`object-cover transition-transform duration-700 ${
-                  hoveredIndex === index ? "scale-110" : "scale-100"
+                className={`object-cover transition-transform duration-500 ${
+                  hoveredIndex === index ? "scale-105" : "scale-100"
                 }`}
               />
               <div
-                className={`absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent transition-opacity duration-500 ${
+                className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${
                   hoveredIndex === index ? "opacity-100" : "opacity-0"
                 }`}
               />
               <div
-                className={`absolute bottom-0 left-0 right-0 p-4 sm:p-6 transition-all duration-500 ${
-                  hoveredIndex === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                className={`absolute bottom-0 left-0 right-0 p-4 transition-all duration-300 ${
+                  hoveredIndex === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
                 }`}
               >
-                <span className="inline-block px-2 py-1 bg-[#E91E8C] text-white text-xs rounded mb-2">
-                  {project.category}
-                </span>
-                <h3 className="text-white font-semibold text-lg">{project.title}</h3>
+                <p className="text-white/70 text-xs mb-1">{project.category}</p>
+                <h3 className="text-white font-medium">{project.title}</h3>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div
-          className={`mt-12 text-center transition-all duration-1000 delay-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-3 text-[#38BDF8] font-semibold"
-          >
-            <span>Request our full portfolio</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>

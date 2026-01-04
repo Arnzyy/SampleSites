@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 const slides = [
   { image: "/daxabuildingsolutions/hero-1.jpg" },
@@ -139,19 +138,8 @@ export default function Hero() {
             }`}
           >
             Building{" "}
-            <span className="relative inline-block">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E91E8C] to-[#38BDF8]">
-                Excellence
-              </span>
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
-                <path d="M2 10C50 4 150 4 198 10" stroke="url(#hero-line)" strokeWidth="4" strokeLinecap="round" />
-                <defs>
-                  <linearGradient id="hero-line" x1="0" y1="0" x2="200" y2="0">
-                    <stop stopColor="#E91E8C" />
-                    <stop offset="1" stopColor="#38BDF8" />
-                  </linearGradient>
-                </defs>
-              </svg>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E91E8C] to-[#38BDF8]">
+              Excellence
             </span>
             <br />
             <span className="text-white/90">Across Somerset</span>
@@ -176,7 +164,7 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="group px-8 py-4 bg-[#BE185D] hover:bg-[#9D174D] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-black/25 hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-3"
+              className="group px-8 py-4 bg-[#BE185D] hover:bg-[#9D174D] text-white font-semibold rounded-lg transition-all duration-300 shadow-md shadow-black/15 hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-3"
             >
               <span>Get Free Quote</span>
               <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,7 +173,7 @@ export default function Hero() {
             </a>
             <a
               href="tel:07411179660"
-              className="px-8 py-4 bg-white/5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
+              className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -201,7 +189,7 @@ export default function Hero() {
             }`}
           >
             {stats.map((stat, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-5 text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
                   <Counter target={stat.number} suffix={stat.suffix} />
                 </div>
