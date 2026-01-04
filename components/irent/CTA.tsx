@@ -73,7 +73,7 @@ export default function CTA() {
           }`}
         >
           <Link
-            href="mailto:info@daxamanagement.com"
+            href="mailto:info@daxamanagement.co.uk"
             className="group px-8 py-4 bg-gradient-to-r from-rose-400 to-pink-500 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-rose-500/25 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
           >
             <svg
@@ -92,7 +92,7 @@ export default function CTA() {
             Email Us
           </Link>
           <a
-            href="tel:02036694166"
+            href="tel:07411179660"
             className="px-8 py-4 bg-white/10 border-2 border-white/30 text-white font-semibold rounded-2xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
           >
             <svg
@@ -108,7 +108,7 @@ export default function CTA() {
                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
               />
             </svg>
-            020 3669 4166
+            07411 179660
           </a>
         </div>
 
@@ -135,7 +135,7 @@ export default function CTA() {
               </svg>
             </div>
             <h3 className="text-white font-semibold mb-1">Phone</h3>
-            <p className="text-white/70">020 3669 4166</p>
+            <p className="text-white/70">07411 179660</p>
           </div>
 
           <div>
@@ -155,7 +155,7 @@ export default function CTA() {
               </svg>
             </div>
             <h3 className="text-white font-semibold mb-1">Email</h3>
-            <p className="text-white/70">info@daxamanagement.com</p>
+            <p className="text-white/70">info@daxamanagement.co.uk</p>
           </div>
 
           <div>

@@ -61,7 +61,7 @@ export default function Header() {
             {/* CTA + Contact */}
             <div className="hidden lg:flex items-center gap-4">
               <a
-                href="tel:02036694166"
+                href="tel:07411179660"
                 className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                   isScrolled
                     ? "text-neutral-600 hover:text-neutral-900"
@@ -81,7 +81,7 @@ export default function Header() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                020 3669 4166
+                07411 179660
               </a>
               <Link
                 href="#contact"
@@ -149,7 +149,7 @@ export default function Header() {
             )}
             <div className="pt-4 border-t border-neutral-100">
               <a
-                href="tel:02036694166"
+                href="tel:07411179660"
                 className="flex items-center gap-2 px-4 py-3 text-neutral-600"
               >
                 <svg
@@ -165,7 +165,7 @@ export default function Header() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                020 3669 4166
+                07411 179660
               </a>
               <Link
                 href="#contact"
