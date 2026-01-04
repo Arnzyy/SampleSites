@@ -144,8 +144,17 @@ export default function Hero() {
             }`}
           >
             Building{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E91E8C] to-[#38BDF8]">
-              Excellence
+            <span className="relative inline-block">
+              <span
+                className="text-transparent bg-clip-text bg-gradient-to-r from-[#E91E8C] to-[#38BDF8]"
+                style={{
+                  filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))",
+                  fontWeight: 800
+                }}
+              >
+                Excellence
+              </span>
+              <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#E91E8C] to-[#38BDF8] rounded-full opacity-80" />
             </span>
             <br />
             <span className="text-white/90">Across Somerset</span>
