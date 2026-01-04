@@ -83,6 +83,23 @@ export default function Gallery() {
             </div>
           ))}
         </div>
+
+        {/* CTA */}
+        <div
+          className={`mt-10 text-center transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-medium transition-colors"
+          >
+            <span>View full portfolio</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );

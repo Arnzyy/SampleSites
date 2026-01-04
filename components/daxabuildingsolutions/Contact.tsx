@@ -1,6 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+
+// Replace with your actual reCAPTCHA site key from https://www.google.com/recaptcha/admin
+const RECAPTCHA_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"; // This is a test key - replace with your own
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +17,9 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,10 +34,20 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!captchaValue) {
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
     setIsSubmitting(true);
+    // Here you would send the captchaValue to your backend for verification
     await new Promise((resolve) => setTimeout(resolve, 1500));
     setIsSubmitting(false);
     setSubmitted(true);
+    recaptchaRef.current?.reset();
+  };
+
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -47,25 +63,22 @@ export default function Contact() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 ${
+          className={`text-center max-w-2xl mx-auto mb-14 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="inline-block px-4 py-1.5 bg-[#E91E8C]/10 text-[#E91E8C] text-sm font-semibold rounded-full mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Get In Touch
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Start Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E91E8C] to-[#38BDF8]">Project?</span>
           </h2>
-          <p className="text-white/60 text-lg">
-            Get in touch today for a free, no-obligation quote. We&apos;re here to bring your vision to life.
+          <p className="text-white/50 text-lg leading-relaxed">
+            Ready to start your project? Get in touch for a free, no-obligation quote.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div
-            className={`bg-white rounded-3xl p-8 sm:p-10 transition-all duration-1000 delay-200 ${
+            className={`bg-white rounded-xl p-8 transition-all duration-1000 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -90,7 +103,7 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-[#BE185D] focus:ring-2 focus:ring-[#BE185D]/20 outline-none transition-all"
                       placeholder="John Smith"
                     />
                   </div>
@@ -102,7 +115,7 @@ export default function Contact() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-[#BE185D] focus:ring-2 focus:ring-[#BE185D]/20 outline-none transition-all"
                       placeholder="07XXX XXXXXX"
                     />
                   </div>
@@ -115,7 +128,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-[#BE185D] focus:ring-2 focus:ring-[#BE185D]/20 outline-none transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -125,7 +138,7 @@ export default function Contact() {
                     id="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all bg-white"
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-[#BE185D] focus:ring-2 focus:ring-[#BE185D]/20 outline-none transition-all bg-white"
                   >
                     <option value="">Select a service...</option>
                     <option value="extension">Extension</option>
@@ -144,18 +157,21 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-[#E91E8C] focus:ring-2 focus:ring-[#E91E8C]/20 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-[#BE185D] focus:ring-2 focus:ring-[#BE185D]/20 outline-none transition-all resize-none"
                     placeholder="Tell us about your project..."
                   />
                 </div>
-                <div className="flex items-center gap-3">
-                  <input type="checkbox" id="captcha" required className="w-5 h-5 rounded accent-[#E91E8C]" />
-                  <label htmlFor="captcha" className="text-neutral-600 text-sm">I&apos;m not a robot</label>
+                <div className="flex justify-center">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={RECAPTCHA_SITE_KEY}
+                    onChange={handleCaptchaChange}
+                  />
                 </div>
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-4 bg-gradient-to-r from-[#E91E8C] to-[#38BDF8] text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-[#E91E8C]/25 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2"
+                  disabled={isSubmitting || !captchaValue}
+                  className="w-full py-4 bg-[#BE185D] hover:bg-[#9D174D] text-white font-semibold rounded-lg shadow-md shadow-black/15 hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -180,7 +196,7 @@ export default function Contact() {
             }`}
           >
             {/* Map */}
-            <div className="rounded-3xl overflow-hidden h-[250px]">
+            <div className="rounded-lg overflow-hidden h-[250px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.5!2d-2.4961!3d51.4144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDI0JzUxLjgiTiAywrAyOSc0Ni4wIlc!5e0!3m2!1sen!2suk!4v1"
                 width="100%"
@@ -192,8 +208,8 @@ export default function Contact() {
             </div>
 
             {/* Contact Cards */}
-            <a href="tel:07411179660" className="flex items-center gap-4 p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-[#E91E8C]/50 transition-all group">
-              <div className="w-14 h-14 rounded-2xl bg-[#E91E8C] flex items-center justify-center">
+            <a href="tel:07411179660" className="flex items-center gap-4 p-6 bg-white/5 rounded-lg border border-white/10 hover:border-[#E91E8C]/50 transition-all group">
+              <div className="w-12 h-12 rounded-lg bg-[#E91E8C] flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -204,8 +220,8 @@ export default function Contact() {
               </div>
             </a>
 
-            <a href="mailto:info@daxabuildingsolutions.co.uk" className="flex items-center gap-4 p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-[#38BDF8]/50 transition-all group">
-              <div className="w-14 h-14 rounded-2xl bg-[#38BDF8] flex items-center justify-center">
+            <a href="mailto:info@daxabuildingsolutions.co.uk" className="flex items-center gap-4 p-6 bg-white/5 rounded-lg border border-white/10 hover:border-[#38BDF8]/50 transition-all group">
+              <div className="w-12 h-12 rounded-lg bg-[#38BDF8] flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -216,8 +232,8 @@ export default function Contact() {
               </div>
             </a>
 
-            <div className="flex items-center gap-4 p-6 bg-white/5 rounded-2xl border border-white/10">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#E91E8C] to-[#38BDF8] flex items-center justify-center">
+            <div className="flex items-center gap-4 p-6 bg-white/5 rounded-lg border border-white/10">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#E91E8C] to-[#38BDF8] flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
