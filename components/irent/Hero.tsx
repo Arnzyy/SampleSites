@@ -165,7 +165,7 @@ export default function Hero() {
 
           {/* Trust Indicators */}
           <div
-            className={`flex flex-wrap items-center gap-8 transition-all duration-700 delay-400 ${
+            className={`flex flex-wrap items-center justify-center gap-8 transition-all duration-700 delay-400 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
