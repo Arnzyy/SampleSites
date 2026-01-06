@@ -171,25 +171,6 @@ export default function Hero() {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <div className="flex items-center gap-3">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-neutral-700 to-neutral-800 border-2 border-neutral-900 flex items-center justify-center text-xs text-white/60"
-                  >
-                    {String.fromCharCode(64 + i)}
-                  </div>
-                ))}
-              </div>
-              <div className="text-sm">
-                <div className="text-white font-medium">500+ Properties</div>
-                <div className="text-white/50">Under Management</div>
-              </div>
-            </div>
-
-            <div className="h-10 w-px bg-white/10 hidden sm:block" />
-
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((i) => (
