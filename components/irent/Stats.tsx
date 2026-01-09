@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: "500+", label: "Properties Managed", suffix: "" },
   { value: "98", label: "Occupancy Rate", suffix: "%" },
   { value: "24", label: "Hour Response Time", suffix: "h" },
   { value: "15", label: "Years Experience", suffix: "+" },
@@ -43,7 +42,7 @@ export default function Stats() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-16 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
