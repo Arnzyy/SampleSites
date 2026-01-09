@@ -73,7 +73,7 @@ export default function CTA() {
           }`}
         >
           <Link
-            href="mailto:connor@daxamanagement.com"
+            href="mailto:info@daxamanagement.com"
             className="group px-8 py-4 bg-gradient-to-r from-rose-400 to-pink-500 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-rose-500/25 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
           >
             <svg
@@ -155,7 +155,7 @@ export default function CTA() {
               </svg>
             </div>
             <h3 className="text-white font-semibold mb-1">Email</h3>
-            <p className="text-white/70">connor@daxamanagement.com</p>
+            <p className="text-white/70">info@daxamanagement.com</p>
           </div>
 
           <div>
